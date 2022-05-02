@@ -122,8 +122,9 @@ function mod:HeartCollectibleUpdate(player)
 	if not mod:GetData(player).BethsHeartIdentifier then
 		mod:GetData(player).BethsHeartIdentifier=mod:GetIdentifier(player)
 	end
-	local itemmultiplier = player:GetCollectibleNum(CollectibleType.COLLECTIBLE_BETHS_HEART)
-	player:CheckFamiliar(bethsheart,itemmultiplier,player:GetCollectibleRNG(CollectibleType.COLLECTIBLE_BETHS_HEART),bethsheartdesc,-1)
+	local numFamiliars = player:GetCollectibleNum(CollectibleType.COLLECTIBLE_BETHS_HEART) + player:GetEffects():GetCollectibleEffectNum(CollectibleType.COLLECTIBLE_BETHS_HEART)
+	
+	player:CheckFamiliar(bethsheart, numFamiliars, player:GetCollectibleRNG(CollectibleType.COLLECTIBLE_BETHS_HEART), bethsheartdesc)	
 end
 
 function mod:BethsHeartInit(heart)
