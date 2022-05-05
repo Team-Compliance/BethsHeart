@@ -2,7 +2,7 @@
 	<Info CreatedBy="trtv" CreatedOn="5/4/2022 8:06:42 PM" Version="14" Fps="30"/>
 	<Content>
 		<Spritesheets>
-			<Spritesheet Path="beths_heart_alt.png" Id="0"/>
+			<Spritesheet Path="familiar\beths_heart_alt.png" Id="0"/>
 		</Spritesheets>
 		<Layers>
 			<Layer Name="body" Id="0" SpritesheetId="0"/>
